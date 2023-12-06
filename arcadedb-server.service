@@ -1,0 +1,17 @@
+[Unit]
+Description=Start ArcadeDB Graph Service
+
+[Service]
+WorkingDirectory=/home/graphuser/devtools/arcadedb-23.11.1
+ExecStart=/home/graphuser/devtools/arcadedb-23.11.1/bin/server.sh -Darcadedb.ha.clusterName=ArcadeGraphDBCluster \
+ -Darcadedb.ha.enabled=true -Darcadedb.server.name=arcade-graphdb-1.eastus.cloudapp.azure.com \
+ -Darcadedb.server.rootPassword=TESTArCadE1050Db -Darcadedb.server.databaseDirectory=/home/graphuser/devtools/arcadedb-23.11.1/databases \
+ -Darcadedb.ha.quorum=majority -Darcadedb.ha.serverRole=any -Darcadedb.server.backupDirectory=/home/graphuser/devtools/arcadedb-23.11.1/backups \
+ -Darcadedb.server.defaultDatabases=coreapps[root]
+
+#Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
