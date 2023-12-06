@@ -1,6 +1,6 @@
 # Run ArcadeDB as a service in Ubuntu
 
-* Create a new service file in the directory ***/lib/systemd/system/***. The naming convention can be like E.g:- *arcadedb-server.service*
+* Create a new service file in the directory ***/lib/systemd/system***. The naming convention can be like E.g:- *arcadedb-server.service*
 * The content of the file can be reference in the file added to this repository.
 * **Commands**:
  1. systemctl daemon-reload  #use this command to apply latest service file changes
