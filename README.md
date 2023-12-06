@@ -11,6 +11,9 @@
    4. systemctl status {SERVICE_NAME}.service  #Status of the systemd service
    5. systemctl stop {SERVICE_NAME}.service    #Stop the service
    6. systemctl restart {SERVICE_NAME}.service #Restart the service
+
+* Check the arcadedb processes are running:
+    1. Run command: **netstat -at** . Verify the ports(default) **2480**, **2424(if in HA)** are running
  
 *  **Check the ArcadeDB service logs:**
    1. journalctl -u {SERVICE_NAME}.service --since today -b -f #Recommended
