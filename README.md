@@ -1,7 +1,7 @@
 # Run ArcadeDB as a service in Ubuntu
 
 * Create a new service file in the directory ***/lib/systemd/system***. The naming convention can be like E.g.:- *arcadedb-server.service*
-* The content of the file can be reference in the file added to this repository.
+* The content of the file can be referenced from the file added to this repository.
   1. WorkingDirectory = The home directory of the arcadedb release downloaded
   2. ExecStart= Use the arcadedb bin/server.sh script together with passing relevant arguments.
 * **Commands**:
